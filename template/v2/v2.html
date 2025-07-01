@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ジャンル分けスクリプトメニュー</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-tabs {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        .menu-tabs button {
+            margin-right: 10px;
+            padding: 8px 15px;
+            cursor: pointer;
+            border: 1px solid #3498db;
+            background: white;
+            color: #3498db;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .menu-tabs button.active,
+        .menu-tabs button:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .menu-content {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            max-height: 320px;
+            overflow-y: auto;
+            padding-right: 10px;
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .script-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            max-width: 500px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .script-name {
+            flex: 0 0 auto;
+            min-width: 120px;
+            white-space: nowrap;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .script-input {
+            flex: 1;
+            margin: 0 12px;
+        }
+
+        .script-input input {
+            width: 100%;
+            padding: 6px 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .script-button button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .script-button button:hover {
+            background-color: #2980b9;
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
+
+        #toast.show {
+            visibility: visible;
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 13px;
+            color: #888;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-tabs">
+        <button id="menu-btn-1" class="active" onclick="showMenu(1)">メニュー1</button>
+        <button id="menu-btn-2" onclick="showMenu(2)">メニュー2</button>
+    </div>
+
+    <div id="menu1" class="menu-content">
+        <div class="script-row">
+            <div class="script-name">スクリプト1</div>
+            <div class="script-input">
+                <input id="script1-value" type="text" placeholder="編集値" value="5.0" />
+            </div>
+            <div class="script-button">
+                <button onclick="main(1)">実行</button>
+            </div>
+        </div>
+        <div class="script-row">
+            <div class="script-name">スクリプト2</div>
+            <div class="script-input">
+                <input id="script2-value" type="text" placeholder="編集値" value="5.0" />
+            </div>
+            <div class="script-button">
+                <button onclick="main(2)">実行</button>
+            </div>
+        </div>
+        <div class="script-row">
+            <div class="script-name">スクリプト3</div>
+            <div class="script-input">
+                <input id="script3-value" type="text" placeholder="編集値" value="-20.0" />
+            </div>
+            <div class="script-button">
+                <button onclick="main(3)">実行</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu2" class="menu-content" style="display:none;">
+        <div class="script-row">
+            <div class="script-name">スクリプト4</div>
+            <div class="script-button">
+                <button onclick="main(4)">実行</button>
+            </div>
+        </div>
+        <div class="script-row">
+            <div class="script-name">スクリプト5</div>
+            <div class="script-input">
+                <input id="script5-value" type="text" placeholder="編集値" value="" />
+            </div>
+            <div class="script-button">
+                <button onclick="main(5)">実行</button>
+            </div>
+        </div>
+        <div class="script-row">
+            <div class="script-name">スクリプト6</div>
+            <div class="script-input">
+                <input id="script6-value" type="text" placeholder="編集値" value="" />
+            </div>
+            <div class="script-button">
+                <button onclick="main(6)">実行</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <footer>MIT License by @kiyu4776</footer>
+
+    <script>
+        setButtonImage('https://www.silhouette-illust.com/wp-content/uploads/2016/11/15710-300x300.jpg');
+        setWindowDrag(0, 0, 300, 50);
+        function getScriptName(scriptNumber) {
+            const inputEl = document.getElementById(`script${scriptNumber}-value`);
+            if (inputEl) {
+                const row = inputEl.closest('.script-row');
+                if (row) {
+                    const nameEl = row.querySelector('.script-name');
+                    if (nameEl) return nameEl.textContent.trim();
+                }
+            }
+            const rows = document.querySelectorAll('.script-row');
+            for (const row of rows) {
+                const btn = row.querySelector('.script-button button');
+                if (!btn) continue;
+                const onclick = btn.getAttribute('onclick');
+                if (!onclick) continue;
+                const m = onclick.match(/main\((\d+)\)/);
+                if (m && Number(m[1]) === scriptNumber) {
+                    const nameEl = row.querySelector('.script-name');
+                    if (nameEl) return nameEl.textContent.trim();
+                }
+            }
+            return `スクリプト${scriptNumber}`;
+        }
+
+        function toast(message) {
+            const toastEl = document.getElementById('toast');
+            toastEl.textContent = message;
+            toastEl.classList.add('show');
+            setTimeout(() => {
+                toastEl.classList.remove('show');
+            }, 2500);
+        }
+
+        function isValidNumber(value) {
+            return Number.isFinite(Number(value));
+        }
+
+        function showMenu(n) {
+            const contents = document.querySelectorAll('.menu-content');
+            const buttons = document.querySelectorAll('.menu-tabs button');
+            contents.forEach((content, index) => {
+                content.style.display = (index + 1 === n) ? 'block' : 'none';
+            });
+            buttons.forEach((btn, index) => {
+                btn.classList.toggle('active', index + 1 === n);
+            });
+        }
+
+        function main(scriptNumber) {
+            let value = null;
+            const inputEl = document.getElementById(`script${scriptNumber}-value`);
+            if (inputEl) {
+                value = inputEl.value.trim();
+                if (!value) {
+                    alert(`error\n${getScriptName(scriptNumber)}: 編集値を入力してください`);
+                    inputEl.focus();
+                    return;
+                }
+                if (!isValidNumber(value)) {
+                    alert(`error\n${getScriptName(scriptNumber)}: 無効な数値形式です`);
+                    inputEl.focus();
+                    return;
+                }
+            }
+            const v = value !== null ? value : null;
+            const fn = window[`run${scriptNumber}`];
+            if (typeof fn === "function") {
+                fn(v);
+            } else {
+                alert('無効なスクリプト番号です');
+            }
+        }
+
+        function run1(v) {
+            toast(`${getScriptName(1)} 完了`);
+        }
+
+        function run2(v) {
+            toast(`${getScriptName(2)} 完了`);
+        }
+
+        function run3(v) {
+            toast(`${getScriptName(3)} 完了`);
+        }
+
+        function run4(v) {
+            toast(`${getScriptName(4)} 完了`);
+        }
+
+        function run5(v) {
+            toast(`${getScriptName(5)} 完了`);
+        }
+
+        function run6(v) {
+            toast(`${getScriptName(6)} 完了`);
+        }
+
+        showMenu(1);
+    </script>
+</body>
+</html>
