@@ -20,10 +20,22 @@ MIT Licenseの条件として、著作権表示およびライセンス文を必
 ## テンプレート
 
 最新の HTML テンプレートはこちらから確認できます。  
-[スクリプトメニュー（v2.html）](https://github.com/calcsupv/h5-/blob/main/template/v2/v2.html)
+[スクリプトメニュー（v2.html）](https://github.com/calcsupv/h5-/blob/main/template/v3/v3.html)
 
 
 <img src="https://raw.githubusercontent.com/calcsupv/h5-/main/preview/写真%202025-07-01%2023%2008%2023.jpg" width="400" alt="プレビュー画像" />
 
+## js関数（v3）
+toast(message)
+トーストを表示します
 
+showMenu(n)
+メニューn番目を表示します
+showMenu(1)なら１番目を表示
+
+getScriptName(scriptNumber) 
+スクリプトの名前を取得します
+
+main(scriptNumber)
+さわるな触れるな
 ---
