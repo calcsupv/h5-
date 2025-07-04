@@ -20,7 +20,7 @@ MIT Licenseの条件として、著作権表示およびライセンス文を必
 ## テンプレート
 
 最新の HTML テンプレートはこちらから確認できます。  
-[スクリプトメニュー（v2.html）](https://github.com/calcsupv/h5-/blob/main/template/v3/v3.html)
+[スクリプトメニュー（v3.html）](https://github.com/calcsupv/h5-/blob/main/template/v3/v3.html)
 
 
 <img src="https://raw.githubusercontent.com/calcsupv/h5-/main/preview/IMG_9295.webp" width="400" alt="プレビュー画像" />
