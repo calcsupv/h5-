@@ -1,0 +1,12 @@
+h5gg.clearResults();
+h5gg.searchNumber("0", "I64", "0x0", "0x200000000");
+
+for (const r of h5gg.getResults(h5gg.getResultsCount())) {
+    const addr = Number(r.address) + 0x4;
+    const val = Number(h5gg.getValue(addr, "I32"));
+    if (val >= 1 && val <= 999 && val !== 0) {//1から999までかつ0ではない
+        h5gg.setValue(addr, 123, "I32");
+    }
+}
+
+h5gg.clearResults();
