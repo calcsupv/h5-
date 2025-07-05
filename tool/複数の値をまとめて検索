@@ -1,0 +1,13 @@
+const targets = [
+    { sig: "8951797", offset: 0x1E0 },
+    { sig: "7128477128474", offset: 0x4C }
+];
+
+for (const { sig, offset } of targets) {
+    h5gg.clearResults();
+    h5gg.searchNumber(sig, "I64", "0x0", "0x200000000");
+    for (const r of h5gg.getResults(h5gg.getResultsCount())) {
+        h5gg.setValue(Number(r.address) + offset, 1, "I32");
+    }
+}
+h5gg.clearResults();
