@@ -3,6 +3,6 @@
     const results = h5gg.getResults(h5gg.getResultsCount());
 
     for (const r of results) {
-        h5gg.setValue(Number(r.address), 1, "I32");
+        h5gg.setValue(Number(r.address) + 0x0, 1, "I32");
     }
     h5gg.clearResults();
