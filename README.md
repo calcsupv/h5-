@@ -37,5 +37,5 @@ getScriptName(scriptNumber)
 スクリプトの名前を取得します
 
 main(scriptNumber)
-さわるな触れるな
+runを呼ぶ
 ---
