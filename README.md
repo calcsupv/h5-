@@ -38,4 +38,3 @@ getScriptName(scriptNumber)
 
 main(scriptNumber)
 runを呼ぶ
----
