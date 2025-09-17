@@ -38,6 +38,7 @@ toast(message)
 showMenu(n)
 メニューn番目を表示します
 showMenu(1)なら１番目を表示
+isValidNumber()入力欄の検証　デフォルトで値のみ
 
 getScriptName(scriptNumber) 
 スクリプトの名前を取得します
