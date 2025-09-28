@@ -63,4 +63,4 @@ getScriptName(scriptNumber)
 main(scriptNumber)
 // runを呼び出します
 ```
-[あ](https://github.com/calcsupv/h5-/blob/main/tool/H5GG%20JavaScript%20Engine/h5gg-js-doc-jpjs)
+[ドキュメント](https://github.com/calcsupv/h5-/blob/main/tool/H5GG%20JavaScript%20Engine/h5gg-js-doc-jpjs)
