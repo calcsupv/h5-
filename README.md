@@ -64,3 +64,32 @@ main(scriptNumber)
 // runを呼び出します
 ```
 [ドキュメント](https://github.com/calcsupv/h5-/blob/main/tool/H5GG%20JavaScript%20Engine/h5gg-js-doc-jpjs)
+
+---
+
+  MIT License
+  Copyright (C) 2025 calcsupv (by @kiyu4776)
+
+  This project is released under the MIT License.
+  You MUST keep this copyright notice and license text.
+  Removal = License violation (copyright infringement).
+
+  CSS modifications are prohibited.
+  CSS additions are allowed.
+
+　https://github.com/calcsupv/h5-
+
+
+   MITライセンス
+  Copyright (C) 2025 calcsupv (by @kiyu4776)
+
+  このプロジェクトは MITライセンス のもとで公開されています。
+  この著作権表示およびライセンス文は必ず保持してください。
+  削除 = ライセンス違反（著作権侵害）となります。
+
+  CSS の改変は禁止されています。
+  CSS の追加は許可されています。
+
+  https://github.com/calcsupv/h5-
+
+
