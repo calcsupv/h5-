@@ -4,7 +4,7 @@
 
 © 2025 calcsupv (by @kiyu4776)
 
-（更新１０月１日 ）
+（更新10月2日）
 
 ## このプロジェクトやコードは、不正行為（チートやクラックなど）を促進するものではありません。
 使用は自己責任で行ってください。作者は一切責任を負いません。
@@ -12,31 +12,20 @@
 
 ### ライセンス表示の重要性について
 
-MIT Licenseの条件として、著作権表示およびライセンス文を必ず含める必要があります。  
-もしこれらの表示が削除された場合はライセンス違反となり、著作権侵害にあたります。  
+このプロジェクトは MIT License のもとで公開されています。
+ただし、CSS ファイルについては後述の条件 [1] が適用されます。
 
-基本的には表示削除に対しては警告を行いますが、  
-もし表示を削除したまま販売などの商用利用を行っていた場合は、  
-販売停止や削除命令など法的手段を講じることがあります。  
+MIT License の条件として、著作権表示およびライセンス文を必ず含める必要があります。
+これらを削除した場合はライセンス違反となり、著作権侵害にあたります。
+
+基本的には表示削除に対しては警告を行いますが、
+もし削除したまま商用利用（販売など）を行っていた場合は、
+販売停止や削除命令など法的手段を講じることがあります。 
 
 ---
 
 ### この条件に同意できない場合は、直ちに使用を停止してください。  
 ### すでにダウンロード済みの場合は、直ちに該当ファイルを削除してください。
-
-
----
-
-### 追加条件 （１０月１日時点）
-
-- **CSSは変更禁止**  
-  既存のスタイルはそのまま利用してください。  
-
-- **CSSの追加はOK**  
-  新しいクラスやスタイルを追加して拡張することは自由です。  
-
-- **ライセンス表記は必須**  
-  著作権表示とライセンス文を削除せずに残してください。  
 
 ---
 
@@ -48,7 +37,11 @@ MIT Licenseの条件として、著作権表示およびライセンス文を必
 <img src="https://raw.githubusercontent.com/calcsupv/h5-/main/preview/IMG_9295.webp" width="400" alt="プレビュー画像" />
 
 ---
+[1] CSS部分の条件
+CSS の改変は禁止されています。
+CSS の追加は許可されています。
 
+---
 ## js関数（v3）
 
 ```js
@@ -70,30 +63,3 @@ main(scriptNumber)
 [ドキュメント](https://github.com/calcsupv/h5-/blob/main/tool/H5GG%20JavaScript%20Engine/h5gg-js-doc-jpjs)
 
 ---
-
-  MIT License
-  Copyright (C) 2025 calcsupv (by @kiyu4776)
-
-  This project is released under the MIT License.
-  You MUST keep this copyright notice and license text.
-  Removal = License violation (copyright infringement).
-
-  CSS modifications are prohibited.
-  CSS additions are allowed.
-
-　https://github.com/calcsupv/h5-
-
-
-   MITライセンス
-  Copyright (C) 2025 calcsupv (by @kiyu4776)
-
-  このプロジェクトは MITライセンス のもとで公開されています。
-  この著作権表示およびライセンス文は必ず保持してください。
-  削除 = ライセンス違反（著作権侵害）となります。
-
-  CSS の改変は禁止されています。
-  CSS の追加は許可されています。
-
-  https://github.com/calcsupv/h5-
-
-
