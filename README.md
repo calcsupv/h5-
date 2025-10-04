@@ -30,7 +30,7 @@
 <img src="https://raw.githubusercontent.com/calcsupv/h5-/main/preview/IMG_9295.webp" width="400" alt="画像" />
 
 ---
-[^1]: 以下に該当するCSSコードについては、削除・改変を一切禁止します。  
+[^1]:a 
 
 【改変・削除禁止対象】  
 `<style>` 内の `footer` セレクタに適用される以下のスタイル。  
