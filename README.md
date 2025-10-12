@@ -79,6 +79,9 @@ JavaScriptによる機能やアルゴリズムの具体的表現
 著作権は創作と同時に自動的に発生し、特別な登録は不要です。著作権者が許可した場合は、その範囲内で複製・改変・配布などが可能です。
 
 ---
+## hex コンバーター
+[ここ]([https://github.com/calcsupv/h5-/blob/main/template/v3/v3.html](https://calcsupv.github.io/HEX-to-int/))
+
 
 
 
