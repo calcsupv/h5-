@@ -80,8 +80,7 @@ JavaScriptによる機能やアルゴリズムの具体的表現
 
 ---
 ## hex コンバーター
-[ここ]((https://calcsupv.github.io/HEX-to-int/))
-
+[ここ](https://calcsupv.github.io/HEX-to-int/)
 
 
 
